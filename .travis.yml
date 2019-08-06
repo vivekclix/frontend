@@ -4,7 +4,8 @@ services:
 before_install:
   - docker build -t vivek.goel/frontend -f Dockerfile.dev .
 script: 
-  - docker run vivek.goel/frontend npm run test -- --coverage
+  - docker run vivek.goel/frontend
+#  npm run test -- --coverage
 deploy:
   provider: elasticbeanstalk
   region: "ap-south-1"
